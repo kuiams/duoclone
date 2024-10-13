@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+<style>@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+
+    @font-face {
+        font-family: 'PP Mori';
+        src: url('"C:\Users\kumar\Downloads\Compressed\pp-mori-free-for-personal-use-v10\PPMori-Regular.otf"') format('otf'),
+             url("C:\Users\kumar\Downloads\Compressed\pp-mori-free-for-personal-use-v10\PPMori-Extralight.otf") format('otf');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+    *{ font-family: PP mori;
+       
+        margin: 0;padding: 0;box-sizing: border-box;
+    }
+    html,body{
+        cursor: none;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .cursor{
+        mix-blend-mode: difference;
+        width: 25px;
+        height: 25px;
+        background: #8a3fc0;
+        position: fixed;
+    border-radius: 50%;
+    z-index: 50;
+    }
+    .hm{
+        position: absolute;
+        width: 50px;
+        position: fixed;
+        height: 50px;
+        bottom: 5% ;
+        left: 3%;
+        display: none;
+        background-color: #ffffff00;
+        z-index: 40;
+       
+    }
+   
+    
+    .main{
+        width: 100%;
+       
+        background-color: #fff;
+    }
+    
+    .page1{
+        color: #ffffff;
+        background-color: hsl(0,7.14%,5.49%);
+        width: 100vw;
+     height: 160vh;
+    }
+    .nav{
+    
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+        display:flex ;
+        align-items: center;
+        width: 100%;
+        /* background-color: #ffffff76; */
+        height: 60px;
+        justify-content: space-between;
+    }
+    .nav img{
+        height: 3vw;
+    }
+    .nav ul {
+        display: flex;
+        gap:0.7vw;
+    }
+    .nav ul li{
+        list-style: none;
+    }
+    .nav ul li a{
+        color: #797979;
+        font-family: "Inria Sans", sans-serif;
+       text-decoration: none;
+       padding-left: 0.2vw;
+       transition: 0.7s;
+    
+    }
+    .nav ul li a:hover{
+        color: #ffffff;
+        border-bottom:1px solid #797979;
+    }
+    .nav i{
+        font-size: 2vw;
+    }
+    .page1 .text{
+        margin-top: 10%;
+        color: #ffffff;
+        /* background-color: #ffffff4e; */
+       font-family: PP mori;
+       display: flex;flex-direction: column;
+       align-items: center;
+    }
+    .page1 .text h2{ font-weight: 500;
+        font-size: 6.5vw;  letter-spacing: 0.01vw;
+    }
+    
+    .vid{
+        margin-top: 10vh;
+        width:  70%;
+    height: 60%;
+    margin-left: 15%;
+    margin-right: 15%;
+    }
+    .vid video{
+        width: 100%;
+    
+       
+    }
+    .page2{
+        background-color: hsl(0,7.14%,5.49%);
+        /* background-color: hsl(0, 0%, 100%) ; */
+        width: 100vw;
+        color: hsl(0,7.14%,5.49%);
+     height: 140vh;
+     border-bottom:1.5px solid #111;
+    }
+    .page2 .txt{
+        width: 100vw;
+      
+        /* background-color: #c9494971; */
+        padding-left: 5vw;
+       padding-top: 17vh;  
+    }
+    .page2 .txt h2{
+        font-size: 1.8vw; 
+        font-weight: 450;
+        width: 65%;
+    }
+    .page2 .txt h2 span{
+        font-size: 3vw; 
+        margin-left: 15px;
+        font-weight: 550;
+        text-transform: uppercase;
+    
+    }
+    .contant{
+        width: 100%;
+        padding-left: 3vw;
+        padding-right: 1vw;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: #721b1b; */
+    }
+    .lftc{
+        margin-top: 7%;
+        width: 50%;
+        margin-right: 4vh;
+        height: 80%;
+        /* background-color: #499a375a; */
+    }
+    .rtc{
+        width: 55%;
+        height: 95%;
+        /* background-color: #121f545a; */
+    }
+    .slides{
+       margin-top: 30%; 
+       
+       border-top: 1px solid #000;
+    }
+    .slides h3{
+      padding-top: 2vh;  
+     }
+     
+     .slides p{
+        padding-top: 1vh;
+        width: 60%; 
+        font-size: 2.5vh; 
+        line-height: 3vh;
+    
+       }
+      
+       .s1{
+        
+        margin-top: 2vh;
+        border-top: 1px solid #000;
+     }
+     .s1 h3{
+       padding-top: 2vh;  
+      }
+      
+      .s1 p{
+         padding-top: 1vh;
+         width: 60%; 
+         font-size: 2.5vh; 
+         line-height: 3vh;
+        }
+        
+       .s1{
+        
+        margin-top: 2vh;
+        border-top: 1px solid #000;
+     }
+     .s1 h3{
+       padding-top: 2vh;  
+      }
+      
+      .s1 p{
+         padding-top: 1vh;
+         width: 60%; 
+         font-size: 2.5vh; 
+         line-height: 3vh;
+        }
+    
+    
+    
+        
+       .s2{
+        
+        margin-top: 2vh;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+     }
+     .s2 h3{
+       padding-top: 2vh;  
+      }
+      
+      .s2 p{
+         padding-top: 1vh;
+         width: 60%; 
+         font-size: 2.5vh; 
+         line-height: 3vh;
+         padding-bottom: 2vh;
+        }
+    
+    
+        .page3{
+            /* background-color: hsl(0,7.14%,5.49%); */
+            background-color: hsl(0, 0%, 100%) ;
+            width: 100vw;
+            color: hsl(0,7.14%,5.49%);
+         height: 300vh;
+         border-bottom:2px solid #000000; 
+        }
+    
+        .page3 .t h1{
+            /* background-color: #a56b6b; */
+            display: inline-block;
+            padding-left: 5vw;
+            margin-top: 9vw;
+            font-size: 9vw;
+            line-height: 15vh;
+            letter-spacing: -0.5vw;
+            font-weight: 260;
+        }
+        .void{
+            width: 30%;
+            height: 0%;
+           margin-bottom: 60%;
+           margin-left:  70%;
+          background-color: #765959;
+    
+        }
+          .void .video1{
+            width: 100%;
+            height: 40vw;
+            object-fit: cover;
+       
+    
+        }
+    
+        .void2{
+            width: 30%;
+            position: absolute;
+            height: 0%;
+           margin-top: -40%;
+           margin-left:  5%;
+          
+    
+        }
+          .void2 img{
+            width: 100%;
+            height: 40vw;
+            object-fit: cover;
+       
+        }
+    
+      </style>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+<script defer data-domain="chocolate-aryn-47.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script><script type="text/javascript" src="https://tiiny.host/ad-script.js"></script></head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="hm">
+        
+     </div>
+    <div class="main">
+       
+       
+               <div class="page1">
+            <div id="nav" class="nav">
+                <a href=""> <img src="logo.svg"></a>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Work</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Studio</a></li>
+                    <li><a href="">Journal</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <i style="color: aliceblue;" class=" ri-circle-fill"></i>
+            </div>
+            <div class="text">
+                <h2 class="h2lft">A design studio made</h2>
+                <h2 class="h2rt">to elevate your brand</h2>
+            </div>
+            <div class="vid">
+                <h4 class="vidhead" style="color: aliceblue;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    mix-blend-mode: difference;
+    
+    display: none;
+    padding-top:1vh;
+    border-radius:10px;
+    width: 7vw;
+    z-index: 51;
+    height: 5vh;
+    font-family: PP mori;
+    ">unmuted</h4>
+                <video id="vedo" loop muted autoplay
+                    src="Duo%20Reel--Desktop-reduced.mp4"></video>
+            </div>
+        </div>
+        <div class="page2">
+
+            <div class="txt">
+                <h2>Capabilities
+                    <span> At Duo Studio, we have a passion for crafting personalized <br> solutions, including:</span>
+                </h2>
+            </div>
+
+            <div class="contant">
+                <div class="lftc">
+                    <div class="slides">
+                        <h3>Branding</h3>
+                        <p>Brand Identity, Brand Strategy, Logo Design, Messaging, Positioning, Art Direction, Brand
+                            Guidelines</p>
+                    </div>
+                    <div class="sl1 s1">
+                        <h3>Websites</h3>
+                       <p>Web Design, Web Development, UI/UX, Wireframes, Copywriting, E-Commerce, SEO, CMS, Analytics/Tracking </p>
+                    </div>
+                    <div class="sl2 s2">
+                        <h3>Content</h3>
+                      <p>Content Strategy, Graphic Design, Marketing Design Collateral, Packaging, Print Design, Illustration, Motion Graphics</p>
+                    </div>
+                </div>
+                <div class="rtc" >
+<img width="100%" class="imgs" height="100%" src="services__branding@1152.webp"  alt="">
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+ 
+<div class="page3"> 
+    <div class="t">
+        <h1>Featured <br> work
+            </h1>
+    </div>
+   <div class="void">
+        <video class="video1"  loop muted autoplay src="projects_madegood-reduced.mp4" ></video>
+   <h5>MadeGood</h5>
+   <p>Brand Strategy, Website</p>
+</div>
+    <div class="void2">
+       <a href=""><img src="home__mgny-thumbnail.webp" alt=""></a>
+       <h5>MGNY</h5>
+   <p>Brand Strategy, Website, Creative Direction, Illustratio</p> 
+    </div>
+
+
+
+</div>
+
+
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script>
+    function init() {
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+    
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector(".main"),
+      smooth: true
+    });
+    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+    locoScroll.on("scroll", ScrollTrigger.update);
+    
+    // tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy(".main", {
+      scrollTop(value) {
+        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+      }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+      getBoundingClientRect() {
+        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+      },
+      // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+      pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+    });
+    
+    
+    
+    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    
+    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+    ScrollTrigger.refresh();
+    }
+      
+    init()
+    
+    
+     var tml =    gsap.timeline({
+      scrollTrigger:{
+        trigger: ".h2lft",
+        scroller:".main",
+        markers:false,
+        start:"top 30%",
+        end:"top 0%",
+        scrub:2,
+    
+      }
+    })
+    
+    
+    tml.to(".h2lft",{
+      x:-800,
+      duratiion:5,
+     
+    },"same")
+    tml.to(".h2rt",{
+      x:800,
+      duratiion:5, 
+    },"same")
+    
+    tml.to(".vid",{
+      duratiion:3, 
+      width:  "90%",
+      height: "95%",
+      marginTop:"2.5%",
+      marginBottom:"2.5%",
+      marginLeft: "5%",
+    marginRight: "5",
+    
+    })
+    gsap.to(".page2",{
+      duratiion:2,
+      color:"black",
+     backgroundColor:"white",
+     scrollTrigger:{
+      trigger: ".vid", 
+      scroller:".main",
+      markers:false,
+      start:"middle -40%",
+      end:"bottom 0%",
+      scrub:2,
+    
+    }
+    
+    },"sm")
+    
+    gsap.to(".page1",{
+      backgroundColor:"white",
+      duratiion:2,
+      scrollTrigger:{
+       trigger: ".vid", 
+       scroller:".main",
+       markers:false,
+       start:"middle -40%",
+       end:"bottom 0%",
+       scrub:2,
+     
+     }
+     
+     },"sm")
+    
+     
+    gsap.to(".hm",{
+     display: "block",
+      duratiion:0,
+      scrollTrigger:{
+       trigger: ".vid", 
+       scroller:".main",
+       markers:false,
+       start:"middle -40%",
+       end:"bottom 0%",
+       scrub:2,
+     
+     }
+     
+     },"sm")
+    
+    
+    
+    
+    tml.to(".vidhead",{
+    display: "block",
+    
+     })
+    
+    </script>
+    <script>const vid = document.querySelector(".vid");
+        const vido = document.querySelector("#vedo");
+        const vidhd = document.querySelector(".vidhead");
+        const img = document.querySelector(".imgs");
+        const slides = document.querySelectorAll(".slides, .sl1, .sl2");
+        const crsr = document.querySelector(".cursor");
+        const main = document.querySelector(".main");
+        const hm = document.querySelector(".hm");
+        
+        // Scroll to top functionality
+        hm.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        
+        
+        // Animate the "hm" element on hover
+        hm.addEventListener('mouseenter', () => {
+            hm.style.transform = 'scale(1.1)';
+            hm.style.transition = 'transform 0.3s';
+        });
+        
+        hm.addEventListener('mouseleave', () => {
+            hm.style.transform = 'scale(1)';
+            hm.style.transition = 'transform 0.3s';
+        });
+        
+        main.addEventListener("mousemove", (e) => {
+          gsap.to(crsr, { x: e.clientX, y: e.clientY });
+        });
+        
+        vido.addEventListener("mousemove", (e) => {
+          gsap.to(vidhd, { x: e.clientX - 50, y: e.clientY });
+        });
+        
+        vid.addEventListener("mouseleave", () => {
+          vido.muted = true;
+          vidhd.style.display = "none";
+          crsr.style.display = "block";
+          vidhd.textContent = "unmuted";
+        });
+        
+        vid.addEventListener("mouseenter", () => {
+          crsr.style.display = "none";
+          vidhd.style.display = "block";
+        });
+        
+        vid.addEventListener("click", () => {
+          vido.muted = !vido.muted;
+          vidhd.textContent = vido.muted ? "unmuted" : "muted";
+        });
+        
+        const imageUrls = [
+          "https://duo-studio.co/assets/services/services__branding@1152.webp",
+          "https://duo-studio.co/assets/services/services__websites@1152.webp",
+          "https://duo-studio.co/assets/services/services__content@1152.webp"
+        ];
+        let currentImageIndex = 0;
+        
+        const rotateImage = (index) => {
+          gsap.to(img, {
+            opacity: 0,
+            duration: 0.3,
+            onComplete: () => {
+              img.src = imageUrls[index];
+              gsap.to(img, {
+                opacity: 1,
+                duration: 0.3
+              });
+            }
+          });
+          
+          currentImageIndex = index;
+        };
+        
+        slides.forEach((slide, index) => {
+          slide.addEventListener("mouseenter", () => {
+            rotateImage(index);
+          });
+        });
+        
+        slides.forEach((slide) => {
+          slide.addEventListener("mouseenter", () => {
+            gsap.to(slide, {
+              y: -2,
+              duration: 0.3,
+              ease: "power2.out"
+            });
+          });
+          
+          slide.addEventListener("mouseleave", () => {
+            gsap.to(slide, {
+              y: 0,
+              duration: 0.3,
+              ease: "power2.out"
+            });
+          });
+        });</script>
+</body>
+
+</html>
